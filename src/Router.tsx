@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Homepage = () => {
+const Router = () => {
   return (
     <div>
-      <h1>Homepage</h1>
+      <h1>Router</h1>
       <Link to="Question1">Question1</Link>
-      <Link to="Question2">Question2</Link>
+      <Link to="Question2/Login">Question2</Link>
     </div>
   )
 }
 
-export default Homepage
+export default Router

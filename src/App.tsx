@@ -1,18 +1,20 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import Homepage from './Homepage'
+import Router from './Router'
 import Question1 from './Question1/Question1'
-import Question2 from './Question2/Question2'
+import Login from './Question2/Login'
+import Dashboard from './Question2/Dashboard'
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/" element={<Router />} />
         <Route path="/Question1" element={<Question1 />} />
-        <Route path="/Question2" element={<Question2 />} />
+        <Route path="/Question2/Login" element={<Login />} />
+        <Route path="/Question2/Dashboard" element={<Dashboard />} />
+        <Route path="*" element={<Router />} />
       </Routes>
     </div>
   )

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../Sass/Question1.css'
+import './Sass/Question1.css'
 
 const Question1 = () => {
   const [count, setCount] = useState<number>(0)
