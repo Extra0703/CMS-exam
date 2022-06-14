@@ -1,0 +1,33 @@
+.question1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.button {
+  width: 300px;
+  height: 100px;
+  background-color: #84bc7d;
+  border-radius: 3.5px;
+  color: white;
+  font-size: 26px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    background: linear-gradient(rgba(white, 0.5), rgba(white, 0.5)), #84bc7d;
+  }
+}
+
+.badge {
+  margin-left: 10px;
+  line-height: 100px;
+  width: 300px;
+  height: 100px;
+  font-size: 26px;
+  color: black;
+}
