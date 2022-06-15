@@ -1,7 +1,7 @@
-import { AccessAlarm, ArrowDropDown, ArrowRight, BarChart, Message, Settings } from '@mui/icons-material'
+import { AccessAlarm, ArrowDropDown, ArrowRight, BarChart, Dashboard, Message, Settings } from '@mui/icons-material'
 import { Box, Collapse, Drawer, List, ListItemButton, ListItemIcon, ListItemText, Toolbar } from '@mui/material'
-import { makeStyles } from '@mui/styles'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 type Props = {
   asideWidth: number
@@ -29,6 +29,15 @@ const Aside = (props: Props) => {
       >
         <Toolbar />
         <List>
+          <Link to="/Question2/Dashboard" style={{ color: 'inherit', textDecoration: 'none' }}>
+            <ListItemButton>
+              <ListItemIcon>
+                <Dashboard />
+              </ListItemIcon>
+              <ListItemText primary="Dashboard" />
+            </ListItemButton>
+          </Link>
+
           <ListItemButton onClick={() => setOpen1(!open1)}>
             <ListItemIcon>
               <AccessAlarm />
@@ -38,18 +47,22 @@ const Aside = (props: Props) => {
           </ListItemButton>
           <Collapse in={open1} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }} autoFocus>
-                <ListItemIcon>
-                  <AccessAlarm />
-                </ListItemIcon>
-                <ListItemText primary="對帳處理 1" />
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }} autoFocus>
-                <ListItemIcon>
-                  <AccessAlarm />
-                </ListItemIcon>
-                <ListItemText primary="對帳處理 2" />
-              </ListItemButton>
+              <Link to="/Question2/Dashboard/a1" style={{ color: 'inherit', textDecoration: 'none' }}>
+                <ListItemButton sx={{ pl: 4 }} autoFocus>
+                  <ListItemIcon>
+                    <AccessAlarm />
+                  </ListItemIcon>
+                  <ListItemText primary="對帳處理 1" />
+                </ListItemButton>
+              </Link>
+              <Link to="/Question2/Dashboard/a2" style={{ color: 'inherit', textDecoration: 'none' }}>
+                <ListItemButton sx={{ pl: 4 }} autoFocus>
+                  <ListItemIcon>
+                    <AccessAlarm />
+                  </ListItemIcon>
+                  <ListItemText primary="對帳處理 2" />
+                </ListItemButton>
+              </Link>
             </List>
           </Collapse>
 
@@ -62,18 +75,22 @@ const Aside = (props: Props) => {
           </ListItemButton>
           <Collapse in={open2} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }} autoFocus>
-                <ListItemIcon>
-                  <Settings />
-                </ListItemIcon>
-                <ListItemText primary="監控儀表板 1" />
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }} autoFocus>
-                <ListItemIcon>
-                  <Settings />
-                </ListItemIcon>
-                <ListItemText primary="監控儀表板 2" />
-              </ListItemButton>
+              <Link to="/Question2/Dashboard/b1" style={{ color: 'inherit', textDecoration: 'none' }}>
+                <ListItemButton sx={{ pl: 4 }} autoFocus>
+                  <ListItemIcon>
+                    <Settings />
+                  </ListItemIcon>
+                  <ListItemText primary="監控儀表板 1" />
+                </ListItemButton>
+              </Link>
+              <Link to="/Question2/Dashboard/b2" style={{ color: 'inherit', textDecoration: 'none' }}>
+                <ListItemButton sx={{ pl: 4 }} autoFocus>
+                  <ListItemIcon>
+                    <Settings />
+                  </ListItemIcon>
+                  <ListItemText primary="監控儀表板 2" />
+                </ListItemButton>
+              </Link>
             </List>
           </Collapse>
 
@@ -86,18 +103,22 @@ const Aside = (props: Props) => {
           </ListItemButton>
           <Collapse in={open3} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>
-                  <BarChart />
-                </ListItemIcon>
-                <ListItemText primary="統計分析 1" />
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>
-                  <BarChart />
-                </ListItemIcon>
-                <ListItemText primary="統計分析 2" />
-              </ListItemButton>
+              <Link to="/Question2/Dashboard/c1" style={{ color: 'inherit', textDecoration: 'none' }}>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>
+                    <BarChart />
+                  </ListItemIcon>
+                  <ListItemText primary="統計分析 1" />
+                </ListItemButton>
+              </Link>
+              <Link to="/Question2/Dashboard/c2" style={{ color: 'inherit', textDecoration: 'none' }}>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>
+                    <BarChart />
+                  </ListItemIcon>
+                  <ListItemText primary="統計分析 2" />
+                </ListItemButton>
+              </Link>
             </List>
           </Collapse>
 
@@ -110,18 +131,22 @@ const Aside = (props: Props) => {
           </ListItemButton>
           <Collapse in={open4} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>
-                  <Message />
-                </ListItemIcon>
-                <ListItemText primary="即時訊息 1" />
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>
-                  <Message />
-                </ListItemIcon>
-                <ListItemText primary="即時訊息 2" />
-              </ListItemButton>
+              <Link to="/Question2/Dashboard/d1" style={{ color: 'inherit', textDecoration: 'none' }}>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>
+                    <Message />
+                  </ListItemIcon>
+                  <ListItemText primary="即時訊息 1" />
+                </ListItemButton>
+              </Link>
+              <Link to="/Question2/Dashboard/d2" style={{ color: 'inherit', textDecoration: 'none' }}>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>
+                    <Message />
+                  </ListItemIcon>
+                  <ListItemText primary="即時訊息 2" />
+                </ListItemButton>
+              </Link>
             </List>
           </Collapse>
         </List>
