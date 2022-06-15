@@ -9,6 +9,7 @@
 .button {
   width: 300px;
   height: 100px;
+  position: relative;
   background-color: #84bc7d;
   border-radius: 3.5px;
   color: white;
@@ -18,16 +19,31 @@
     cursor: pointer;
   }
 
-  &:active {
-    background: linear-gradient(rgba(white, 0.5), rgba(white, 0.5)), #84bc7d;
+  &:active::after {
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
   }
 }
 
+.format {
+  width: 0;
+  height: 100px;
+  position: relative;
+}
+
 .badge {
-  margin-left: 10px;
+  position: absolute;
+  top: 0;
+  left: 10px;
   line-height: 100px;
   width: 300px;
   height: 100px;
+  margin: 0;
   font-size: 26px;
   color: black;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Sass/Question1.css'
+import './Sass/Question1.scss'
 
 const Question1 = () => {
   const [count, setCount] = useState<number>(0)
@@ -12,9 +12,11 @@ const Question1 = () => {
       <button className="button" onClick={handleCountChange}>
         Click Me
       </button>
-      <p className="badge">
-        Count: <span>{count}</span>
-      </p>
+      <div className="format">
+        <p className="badge">
+          Count: <span>{count}</span>
+        </p>
+      </div>
     </div>
   )
 }
