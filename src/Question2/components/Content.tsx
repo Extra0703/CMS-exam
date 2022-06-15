@@ -1,4 +1,4 @@
-import { Box, Toolbar, Typography } from '@mui/material'
+import { Box, Toolbar } from '@mui/material'
 import React from 'react'
 import DataTable from './DataTable'
 import Filter from './Filter'
